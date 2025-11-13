@@ -1,0 +1,39 @@
+variable "aws_shared_config_files" {
+  description = "AWS shared config file path"
+  type        = list(string)
+  default     = ["/home/zane/.aws/config"]
+}
+
+variable "aws_shared_credentials_files" {
+  description = "AWS shared credentials file path"
+  type        = list(string)
+  default     = ["/home/zane/.aws/credentials"]
+}
+
+variable "aws_profile" {
+  description = "AWS CLI profile to use"
+  type        = string
+  default     = "default"
+}
+
+variable "bucket_name" {
+  description = "The name of the S3 bucket"
+  type        = string
+  default     = "ahk_s3_12321"
+}
+
+variable "region" {
+  description = "The AWS region to create the bucket in"
+  type        = string
+  default     = "ap-southest-1"
+}
+
+variable "tags" {
+  type        = map(string)
+  default     = {
+    Name        = "ahk-terraform-s3"
+    nvironment  = "Prod"
+    Owner       = "AHK"
+    Project     = "Terraform Demo"
+  }
+}
