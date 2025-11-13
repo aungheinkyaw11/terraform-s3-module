@@ -8,11 +8,8 @@ terraform {
 }
 
 provider "aws" {
-  shared_config_files      = ["/Users/aungheinkyaw/.aws/config"]
-  shared_credentials_files = ["/Users/aungheinkyaw/.aws/credentials"]
+  shared_config_files      = ["/home/zane/.aws/config"]
+  shared_credentials_files = ["/home/zane/.aws/credentials"]
   profile                  = "cloudlab-master"
-  alias                    = "cloudlab-master"
   region                   = "ap-southeast-1"
 }
-
-

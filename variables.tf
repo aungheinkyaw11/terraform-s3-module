@@ -1,21 +1,3 @@
-variable "aws_shared_config_files" {
-  description = "AWS shared config file path"
-  type        = list(string)
-  default     = ["/home/zane/.aws/config"]
-}
-
-variable "aws_shared_credentials_files" {
-  description = "AWS shared credentials file path"
-  type        = list(string)
-  default     = ["/home/zane/.aws/credentials"]
-}
-
-variable "aws_profile" {
-  description = "AWS CLI profile to use"
-  type        = string
-  default     = "cloudlab-master"
-}
-
 variable "bucket_name" {
   description = "The name of the S3 bucket"
   type        = string
